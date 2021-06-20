@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css"
+import axios from "axios"
 
 const App =() => {
     const[fullName,setFullName]=useState("");
@@ -7,22 +8,38 @@ const App =() => {
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState("");
 
-    function changeFullName(event){
-        setFullName(event.target.value)
-        console.log(event.target.value);
+    const changeFullName=(e) => {
+        setFullName(e.target.value)
     }
-    function changeUserName(event){
-        setUserName(event.target.value)
+    const changeUserName=(e) => {
+        setUserName(e.target.value)
     }
-    function changeEmail(event){
-        setEmail(event.target.value)
+    const changeEmail=(e) => {
+        setEmail(e.target.value)
     }
-    function changePassword(event){
-        setPassword(event.target.value)
+    const changePassword=(e) => {
+        setPassword(e.target.value)
     }
-    function onSubmit(event){
+    const onSubmit=(e) => {
+        e.preventDefault()
+        const registered={
+            fullName:fullName,
+            userName:userName,
+            email:email,
+            password:password
+
+        }
         
+        axios.post("http://localhost:4000/app/signup",registered)
+        .then(response => console.log(response))
+
+        setFullName("")
+        setUserName("")
+        setPassword("")
+        setEmail("")
+
     }
+
 
     return (
         <div>
@@ -30,7 +47,7 @@ const App =() => {
                 <div className="form-div">
                     <form onSubmit={onSubmit}> 
                         <input type="text" placeholder="Full Name" onChange={changeFullName}
-                        value={fullName} className="form-control form-group" />
+                        value={fullName} className="form-control form-group" /><br />
 
                         <input type="text" placeholder="User Name" onChange={changeUserName}
                         value={userName} className="form-control form-group" />
