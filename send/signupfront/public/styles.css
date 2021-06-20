@@ -1,0 +1,41 @@
+.container {
+    margin: 10% auto;
+    padding: 80px 0;
+    text-align: center;
+    opacity: 0.8;
+    
+}
+#bootstrap-overrides {
+    background-image: url("/form-pic.jpg");
+}
+
+#bootstrap-overrides .form-control {
+    display: block;
+    width: 400px;
+    margin-left: 350px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#input-1  {
+    text-align: center;
+}
+#input-2  {
+    text-align: center;
+}
+#input-3  {
+    text-align: center;
+}
+#input-4  {
+    text-align: center;
+}

@@ -46,19 +46,19 @@ const App =() => {
             <div className="container">
                 <div className="form-div">
                     <form onSubmit={onSubmit}> 
-                        <input type="text" placeholder="Full Name" onChange={changeFullName}
+                        <input type="text" id="input-1" placeholder="Full Name" onChange={changeFullName}
                         value={fullName} className="form-control form-group" /><br />
 
-                        <input type="text" placeholder="User Name" onChange={changeUserName}
-                        value={userName} className="form-control form-group" />
+                        <input type="text" id="input-2" placeholder="User Name" onChange={changeUserName}
+                        value={userName} className="form-control form-group" /><br />
 
-                        <input type="text" placeholder="E-mail" onChange={changeEmail}
-                        value={email} className="form-control form-group" />
+                        <input type="text" id="input-3"  placeholder="E-mail" onChange={changeEmail}
+                        value={email} className="form-control form-group" /><br />
 
-                        <input type="password" placeholder="Password" onChange={changePassword}
-                        value={password} className="form-control form-group" />
+                        <input type="password" id="input-4" placeholder="Password" onChange={changePassword}
+                        value={password} className="form-control form-group" /><br />
 
-                        <input type="submit" className="btn btn-danger btn-block" value="Submit" />
+                        <input type="submit"  className="btn btn-danger btn-block" value="Submit" />
 
                     </form>
 
